@@ -1,0 +1,36 @@
+.TH Aurora "v0.0.1"
+.SH NOM
+Aurora \- Manuel
+
+.SH SYNOPSIS
+.B aurora [OPTIONS]... [ARCHIVE_FILE]
+
+.SH DESCRIPTION
+Ce programme permet de lister, extraire et généré une archive tar.
+
+.SH OPTIONS
+.TP 
+.B \-l, --list      ARCHIVE_FILE
+.TP 
+.B \-e, --extract   ARCHIVE_FILE
+.TP 
+.B \-c, --create    ARCHIVE_FILE
+.TP 
+.B \-d, --directory DIRECTORY_TO_PROCESS
+.TP 
+.B \-z, --compress  
+
+.TP 
+.B \-v, --verbose : enclenche le mode *verbose*
+.TP 
+.B \-h, --help    : affiche cette aide
+
+.SH EXEMPLE
+.TP
+Afficher l'aide pour la commande example :
+.RS
+$ aurora -h
+.RE
+
+.SH AUTEUR
+Brice WEBER KLIPFEL
