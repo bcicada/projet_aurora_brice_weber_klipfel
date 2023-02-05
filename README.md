@@ -10,6 +10,6 @@
 
 **Fonctionnalités clés** :
 - Respect de la norme GNU POSIX 1003.1-1988 (ustar).
-- FM01 : Le binaire est capable de lister les éléments d’une archive.
-- FM02 : Le binaire est d’extraire l’intégralité d’une archive passée en paramètre.
+- ✅ FM01 : Le binaire est capable de lister les éléments d’une archive.
+- 🛠 FM02 : Le binaire est d’extraire l’intégralité d’une archive passée en paramètre.
 - FM03 : L’application est capable de générer une archive.
