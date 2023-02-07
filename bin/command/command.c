@@ -1,12 +1,9 @@
-#include <unistd.h>
+#include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <errno.h>
-#include <tar.h>
+#include <unistd.h>
 #include <sys/stat.h>
-#include <fcntl.h>
-#include <string.h>
-#include <libgen.h>
+#include <sys/types.h>
 #include "command.h"
 #include "../tar/tar_header.h"
 
