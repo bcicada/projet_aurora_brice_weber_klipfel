@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Aurora: Référence du fichier /home/devops/sys/projet_aurora_brice_weber_klipfel/bin/command/command.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Aurora
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('command_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier command.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;tar.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;libgen.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="command_8h_source.html">command.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tar__header_8h_source.html">../tar/tar_header.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de command.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="command_8c__incl.png" border="0" usemap="#a_2home_2devops_2sys_2projet__aurora__brice__weber__klipfel_2bin_2command_2command_8c" alt=""/></div>
+<map name="a_2home_2devops_2sys_2projet__aurora__brice__weber__klipfel_2bin_2command_2command_8c" id="a_2home_2devops_2sys_2projet__aurora__brice__weber__klipfel_2bin_2command_2command_8c">
+<area shape="rect" title=" " alt="" coords="397,5,603,61"/>
+<area shape="rect" title=" " alt="" coords="5,109,80,136"/>
+<area shape="rect" title=" " alt="" coords="104,109,171,136"/>
+<area shape="rect" title=" " alt="" coords="195,109,266,136"/>
+<area shape="rect" title=" " alt="" coords="290,109,358,136"/>
+<area shape="rect" title=" " alt="" coords="383,109,433,136"/>
+<area shape="rect" title=" " alt="" coords="457,109,543,136"/>
+<area shape="rect" title=" " alt="" coords="567,109,630,136"/>
+<area shape="rect" title=" " alt="" coords="654,109,725,136"/>
+<area shape="rect" title=" " alt="" coords="749,109,824,136"/>
+<area shape="rect" href="command_8h.html" title=" " alt="" coords="848,109,947,136"/>
+<area shape="rect" href="tar__header_8h.html" title=" " alt="" coords="971,109,1109,136"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a0f07bfbd9d2e851de29fe9f1480e1873"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8c.html#a0f07bfbd9d2e851de29fe9f1480e1873">process_options</a> (int argc, char *argv[], int *list, int *extract, int *create, int *directory, int *compress, int *verbose, int *help)</td></tr>
+<tr class="memdesc:a0f07bfbd9d2e851de29fe9f1480e1873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traite les options en ligne de commande.  <a href="command_8c.html#a0f07bfbd9d2e851de29fe9f1480e1873">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0f07bfbd9d2e851de29fe9f1480e1873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb20f2b6940fc105300390bce6a80ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8c.html#abeb20f2b6940fc105300390bce6a80ab">help_option</a> ()</td></tr>
+<tr class="memdesc:abeb20f2b6940fc105300390bce6a80ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les options d'aide.  <a href="command_8c.html#abeb20f2b6940fc105300390bce6a80ab">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abeb20f2b6940fc105300390bce6a80ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8af75f3b9df0adaaf6322f9a263f37d"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8c.html#ac8af75f3b9df0adaaf6322f9a263f37d">open_tar_file</a> (const char *filename)</td></tr>
+<tr class="memdesc:ac8af75f3b9df0adaaf6322f9a263f37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ouvre un fichier tar en mode binaire en lecture.  <a href="command_8c.html#ac8af75f3b9df0adaaf6322f9a263f37d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac8af75f3b9df0adaaf6322f9a263f37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8db34e4695fd74531c6fd5ffcfaa67eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8c.html#a8db34e4695fd74531c6fd5ffcfaa67eb">print_tar_entries</a> (FILE *file)</td></tr>
+<tr class="memdesc:a8db34e4695fd74531c6fd5ffcfaa67eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les entrées du fichier tar.  <a href="command_8c.html#a8db34e4695fd74531c6fd5ffcfaa67eb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8db34e4695fd74531c6fd5ffcfaa67eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16933be91197c5dd2860394ae27f583c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8c.html#a16933be91197c5dd2860394ae27f583c">extract_tar</a> (FILE *file, const char *path, int *verbose)</td></tr>
+<tr class="memdesc:a16933be91197c5dd2860394ae27f583c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extrait les entrées d'un fichier tar.  <a href="command_8c.html#a16933be91197c5dd2860394ae27f583c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a16933be91197c5dd2860394ae27f583c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a16933be91197c5dd2860394ae27f583c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16933be91197c5dd2860394ae27f583c">&#9670;&nbsp;</a></span>extract_tar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void extract_tar </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>verbose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extrait les entrées d'un fichier tar. </p>
+<p>La fonction <code>extract_tar</code> lit les entrées d'un fichier tar et les extrait dans un dossier donné. Si le paramètre <code>verbose</code> est non nul, les noms des dossiers et fichiers extraits seront affichés.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>Pointeur sur le fichier tar </td></tr>
+    <tr><td class="paramname">path</td><td>Chemin vers le dossier où les entrées seront extraites </td></tr>
+    <tr><td class="paramname">verbose</td><td>Pointeur sur un entier, 0 pour désactiver l'affichage, non nul pour l'activer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abeb20f2b6940fc105300390bce6a80ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeb20f2b6940fc105300390bce6a80ab">&#9670;&nbsp;</a></span>help_option()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void help_option </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche les options d'aide. </p>
+<p>Les descriptions détaillées pour chaque option sont affichées à l'aide de printf(). </p>
+
+</div>
+</div>
+<a id="ac8af75f3b9df0adaaf6322f9a263f37d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8af75f3b9df0adaaf6322f9a263f37d">&#9670;&nbsp;</a></span>open_tar_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* open_tar_file </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ouvre un fichier tar en mode binaire en lecture. </p>
+<p>Cette fonction ouvre un fichier tar en mode binaire en lecture, en utilisant <code>fopen()</code>. Si l'ouverture du fichier échoue, la fonction traite l'erreur en utilisant <code>errno</code> et affiche un message d'erreur approprié.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Le nom du fichier tar à ouvrir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le pointeur sur le fichier ouvert en cas de succès, <code>NULL</code> en cas d'échec. </dd></dl>
+
+</div>
+</div>
+<a id="a8db34e4695fd74531c6fd5ffcfaa67eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8db34e4695fd74531c6fd5ffcfaa67eb">&#9670;&nbsp;</a></span>print_tar_entries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_tar_entries </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche les entrées du fichier tar. </p>
+<p>Cette fonction lit et affiche les entrées du fichier tar passé en paramètre. Pour chaque entrée, elle appelle la fonction <code>print_header</code> pour afficher les informations sur l'entrée.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>Pointeur sur le fichier tar ouvert. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0f07bfbd9d2e851de29fe9f1480e1873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f07bfbd9d2e851de29fe9f1480e1873">&#9670;&nbsp;</a></span>process_options()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void process_options </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>extract</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>create</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>directory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>compress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>verbose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>help</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Traite les options en ligne de commande. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Le nombre d'arguments en ligne de commande. </td></tr>
+    <tr><td class="paramname">argv</td><td>Les arguments en ligne de commande. </td></tr>
+    <tr><td class="paramname">list</td><td>Pointeur vers une variable booléenne pour indiquer si l'option "-l" ou "--list" a été fournie. </td></tr>
+    <tr><td class="paramname">extract</td><td>Pointeur vers une variable booléenne pour indiquer si l'option "-e" ou "--extract" a été fournie. </td></tr>
+    <tr><td class="paramname">create</td><td>Pointeur vers une variable booléenne pour indiquer si l'option "-c" ou "--create" a été fournie. </td></tr>
+    <tr><td class="paramname">directory</td><td>Pointeur vers une variable booléenne pour indiquer si l'option "-d" ou "--directory" a été fournie. </td></tr>
+    <tr><td class="paramname">compress</td><td>Pointeur vers une variable booléenne pour indiquer si l'option "-v" ou "--compress" a été fournie. </td></tr>
+    <tr><td class="paramname">verbose</td><td>Pointeur vers une variable booléenne pour indiquer si l'option "-v" ou "--verbose" a été fournie. </td></tr>
+    <tr><td class="paramname">help</td><td>Pointeur vers une variable booléenne pour indiquer si l'option "-h" ou "--help" a été fournie.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cette fonction utilise getopt() pour traiter les options en ligne de commande. Les options disponibles sont "-l" ou "--list", "-e" ou "--extract", "-c" ou "--create", "-d" ou "--directory", "-v" ou "--verbose", et "-h" ou "--help". Les variables booléennes correspondantes seront mises à jour en conséquence. Si une option non valide est trouvée, un message d'erreur sera affiché et le programme quittera avec un code d'erreur. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_2ea30aa2956a8db99dd22aa5e597f384.html">bin</a></li><li class="navelem"><a class="el" href="dir_460c3d9f60e1da66648d085f5bfb4404.html">command</a></li><li class="navelem"><a class="el" href="command_8c.html">command.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
