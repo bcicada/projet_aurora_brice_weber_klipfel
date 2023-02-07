@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
     int verbose = 0;
     int help = 0;
 
-    // Fichier utilisé.
+    // Gestions.
     FILE *file;
 
     // Traitement des options de commande.
@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
     // Si une demande d'extraction a été faite.
     if (extract)
     {
-
+        extract_tar(file, argv[3], &verbose);
     }
 
     return 0;

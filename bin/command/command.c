@@ -92,3 +92,48 @@ void print_tar_entries(FILE *file) {
     }
 }
 
+void extract_tar(FILE *file, const char *path, int *verbose) {
+    tar_header t_header;
+    int size;
+    char file_path[512];
+    
+    while (fread(&t_header, sizeof(tar_header), 1, file) == 1) {
+        // Calculer la taille du fichier en octets
+        sscanf(t_header.size, "%o", &size);
+
+        // Créer le chemin complet du fichier ou dossier
+        sprintf(file_path, "%s/%s", path, t_header.name);
+
+        // Si le typeflag est d (directory), créer le dossier
+        if (t_header.typeflag[0] == '5') {
+            mkdir(file_path, 0755);
+            if (verbose) {
+                printf("Dossier extrait : %s\n", file_path);
+            }
+        } else {
+            // Sinon, extraire le fichier
+            FILE *out = fopen(file_path, "wb");
+
+            if (out == NULL) {
+                perror("fopen");
+                return;
+            }
+
+            for (int i = 0; i < size; i++) {
+                fputc(fgetc(file), out);
+            }
+
+            fclose(out);
+
+            if (verbose) {
+                printf("Fichier extrait : %s\n", file_path);
+            }
+        }
+        
+        // Aligner la position du fichier sur un multiple de 512 octets
+        int rest = size % 512;
+        if (rest > 0) {
+            fseek(file, 512 - rest, SEEK_CUR);
+        }
+    }
+}
