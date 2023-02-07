@@ -12,7 +12,7 @@
 - ❌ Respect de la norme GNU POSIX 1003.1-1988 (ustar).
 - ✅ FM01 : Le binaire est capable de lister les éléments d’une archive.
 - ✅ FM02 : Le binaire est d’extraire l’intégralité d’une archive passée en paramètre.
-- 🛠FM03 : L’application est capable de générer une archive.
+- 🛠 FM03 : L’application est capable de générer une archive.
 
 **Fonctionnalités clefs optionnelles** :
 - ❌ FMO01 : La prise en charge de la compression d’une archive tar (via la libraire zlib).
