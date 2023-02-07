@@ -26,6 +26,6 @@ typedef struct tar_header {
 } tar_header;
 
 void print_header(tar_header *header);
-void extract_file(const char *filename, int mode, int size, FILE *fp);
+void extract_tar(FILE *fp, tar_header *header);
 
 #endif

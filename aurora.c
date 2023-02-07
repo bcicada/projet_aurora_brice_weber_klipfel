@@ -1,71 +1,40 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <errno.h>
-#include "config/tar_header/tar_header.c"
-
+#include "bin/tar/tar_header.c"
+#include "bin/command/command.c"
 
 int main(int argc, char *argv[]) {
-    int opt;
+    // Paramètres disponibles.
     int list = 0;
     int extract = 0;
+    int create = 0;
+    int directory = 0;
+    int compress = 0;
+    int verbose = 0;
+    int help = 0;
 
-    // Options disponibles.
-    while ((opt = getopt(argc, argv, "f:le")) != -1) {
-        switch (opt) {
-        case 'f':
-            break;
-        case 'l':
-            list = 1;
-            break;
-        case 'e':
-            extract = 1;
-            break;
-        default:
-            fprintf(stderr, "Utilisation : %s [-f <archive.tar>]\n", argv[0]);
-            exit(EXIT_FAILURE);
-        }
+    // Fichier utilisé.
+    FILE *file;
+
+    // Traitement des options de commande.
+    process_options(argc, argv, &list, &extract, &create, &directory, &compress, &verbose, &help);
+
+    // Si une demande d'aide a été faite.
+    if (help) {
+        help_option();
+        return 0;
     }
 
-    // Vérification de l'existence de l'option -f.
-    if (optind >= argc) {
-        fprintf(stderr, "Erreur : Option -f <archive.tar> manquante\n");
-        exit(EXIT_FAILURE);
+    // Récupération et ouverture du fichier tar.
+    file = open_tar_file(argv[2]);
+
+    // Si une demande de listing a été faite.
+    if (list) {
+        print_tar_entries(file);
     }
 
-    // Ouverture du fichier tar.
-    FILE *fp;
-    errno = 0;
-    fp = fopen(argv[optind], "r");
-    if (fp == NULL) {
-        perror("Erreur : Impossible d'ouvrir ce fichier\n");
-        exit(EXIT_FAILURE);
-    }
-    tar_header header;
+    // Si une demande d'extraction a été faite.
+    if (extract)
+    {
 
-    // Boucle pour lire les en-têtes d'archives.
-    while (fread(&header, BLOCK_SIZE, 1, fp) == 1) {
-        if (header.name[0] == '\0') {
-            break;
-        }
-        if (list) {
-            print_header(&header);
-        }
-        if (extract) {
-            int mode = strtol(header.mode, NULL, 8);
-            int size = strtol(header.size, NULL, 8);
-            extract_file(header.name, mode, size, fp);
-        }
-        int size = strtol(header.size, NULL, 8);
-        int blocks = (size / BLOCK_SIZE) + (size % BLOCK_SIZE != 0);
-        fseek(fp, blocks * BLOCK_SIZE, SEEK_CUR);
-    }
-
-    // Fermeture du fichier.
-    if (fclose(fp) != 0) {
-        perror("Erreur : Impossible de fermer ce fichier\n");
-        exit(1);
     }
 
     return 0;
