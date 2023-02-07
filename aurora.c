@@ -3,13 +3,14 @@
 
 int main(int argc, char *argv[]) {
     // Paramètres disponibles.
-    int list = 0;
-    int extract = 0;
-    int create = 0;
-    int directory = 0;
-    int compress = 0;
-    int verbose = 0;
-    int help = 0;
+    int list = 0;           // OK
+    int extract = 0;        // OK
+    int create = 0;         // 
+    int directory = 0;      // 
+    int compress = 0;       // 
+
+    int verbose = 0;        // OK
+    int help = 0;           // OK
 
     // Gestions.
     FILE *file;
@@ -23,9 +24,6 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
-    // Récupération et ouverture du fichier tar.
-    file = open_tar_file(argv[2]);
-
     // Si une demande de listing a été faite.
     if (list) {
         print_tar_entries(file);
@@ -34,7 +32,16 @@ int main(int argc, char *argv[]) {
     // Si une demande d'extraction a été faite.
     if (extract)
     {
+        // Récupération et ouverture du fichier tar.
+        file = open_tar_file(argv[2]);
+
         extract_tar(file, argv[3], &verbose);
+    }
+
+    // Si une demande de création d'archive a été faite.
+    if (create) 
+    {
+        
     }
 
     return 0;

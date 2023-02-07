@@ -158,7 +158,7 @@ void extract_tar(FILE *file, const char *path, int *verbose) {
         // Si le typeflag est d (directory), créer le dossier
         if (t_header.typeflag[0] == '5') {
             mkdir(file_path, 0755);
-            if (verbose) {
+            if (*verbose == 1) {
                 printf("Dossier extrait : %s\n", file_path);
             }
         } else {
@@ -176,7 +176,7 @@ void extract_tar(FILE *file, const char *path, int *verbose) {
 
             fclose(out);
 
-            if (verbose) {
+            if (*verbose == 1) {
                 printf("Fichier extrait : %s\n", file_path);
             }
         }
