@@ -2,7 +2,7 @@
 
 **Version du logiciel** : 0.0.0
 
-**Développeur** : [Brice WEBER KLIPFEL](https://github.com/bcicada)
+**Développeur** : [Brice WEBER KLIPFEL](https://github.com/bcicada) [Guillaume SCHMIDT](https://github.com/gs_cnam)
 
 **Date de dernière mise à jour** : 2023-02-05
 
