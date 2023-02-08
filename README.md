@@ -1,8 +1,8 @@
 ## Aurora 
 
-**Version du logiciel** : 0.0.0
+**Version du logiciel** : 0.2.3
 
-**Développeur** : [Brice WEBER KLIPFEL](https://github.com/bcicada) [Guillaume SCHMIDT](https://github.com/gscnam)
+**Développeur** : [Brice WEBER KLIPFEL](https://github.com/bcicada) [Guillaume SCHMIDT](https://github.com/gs-cnam)
 
 **Date de dernière mise à jour** : 2023-02-05
 
